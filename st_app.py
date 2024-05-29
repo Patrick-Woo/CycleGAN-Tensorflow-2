@@ -6,7 +6,7 @@ Here's our first attempt at using data to create a table:
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from streamlit_option_menu import option_menu
+from streamlit_option_menu import option_menu
 from io import StringIO
 import os
 #import cantools
@@ -61,11 +61,11 @@ def on_change(key):
 # 1-2.create a sidebar as menu
 with st.sidebar:
     #selected接受option_menu中on_change的返回值string，用此判断在哪个page上
-    #selected = option_menu("Main Menu", ["Database", "Decode", 'Analyse',"Help"],
-    #                       icons=['house', 'cloud-upload', "gear", 'list-task'],
-    #                       on_change=on_change, key='menu_1',menu_icon="cast", default_index=1)
+    selected = option_menu("Main Menu", ["Database", "Decode", 'Analyse',"Help"],
+                           icons=['house', 'cloud-upload', "gear", 'list-task'],
+                           on_change=on_change, key='menu_1',menu_icon="cast", default_index=1)
     #patrick added
-    selected='Database'
+    #selected='Database'
     
 #2. design home page
 if selected=='Database':
