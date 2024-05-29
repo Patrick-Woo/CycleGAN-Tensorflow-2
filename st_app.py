@@ -9,8 +9,8 @@ import numpy as np
 #from streamlit_option_menu import option_menu
 from io import StringIO
 import os
-import cantools
-import can
+#import cantools
+#import can
 from datetime import datetime
 import time
 
@@ -86,7 +86,7 @@ if selected=='Database':
         dbc_identity = [uploaded_dbc.file_id, uploaded_dbc.name, uploaded_dbc.size]
         # st.write(uploaded_file.file_id,uploaded_file.name,uploaded_file.size)
         save_uploaded_file(uploaded_dbc, db_path)
-
+'''
 #3. design uploader page
 if selected=='Decode':
     st.title('解析数据')
@@ -263,7 +263,7 @@ if selected=='Analyse':
 if selected == 'Help':
     st.title('帮助')
     st.markdown('### Powered By Model Group')
-
+'''
 
 
 
